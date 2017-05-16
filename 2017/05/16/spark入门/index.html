@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/16/spark入门/index.html">
 <meta property="og:site_name" content="ZRK&#39;s Words">
 <meta property="og:description" content="模式：+ 本地单机模式：所有Spark进程都运行在同一个JVM中。  + 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 + 基于Mesos：使用Mesos集群计算框架。 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。   spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK） Spa">
-<meta property="og:updated_time" content="2017-05-16T14:56:39.067Z">
+<meta property="og:updated_time" content="2017-05-16T14:59:08.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark入门">
 <meta name="twitter:description" content="模式：+ 本地单机模式：所有Spark进程都运行在同一个JVM中。  + 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 + 基于Mesos：使用Mesos集群计算框架。 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。   spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK） Spa">
@@ -324,8 +324,7 @@
 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。 
 </code></pre><ol>
 <li>spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK）</li>
-<li>Spark集群：集群由两类测序构成,一个驱动程序多个执行程序。本地模式时所有的处理都运行在JVM中，集群时运行在不同节点上。</li>
-<li>编程模型</li>
+<li>Spark集群：集群由两类测序构成,一个驱动程序多个执行程序。本地模式时所有的处理都运行在JVM中，集群时运行在不同节点上。<h3 id="编程模型"><a href="#编程模型" class="headerlink" title="编程模型"></a>编程模型</h3></li>
 </ol>
 <ul>
 <li><p><code>SparkContext</code>类与<code>SparkConf</code>类：任何Spark程序的编写都从<code>SparkContext</code>(使用Java编写时是<code>JavaSparkContext</code>)开始的。<code>SparkContext</code>需要初始化一个<code>SparkConf</code>对象，后者包含Spark集群配置的各种参数（如主节点的URL）。初始化完成后可用<code>SparkContext</code>的方法类创建和操作分布式数据集和共享变量。Spark shell可以自动完成上述初始化过程。Scala代码实现：</p>
@@ -553,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#模式："><span class="nav-number">1.</span> <span class="nav-text">模式：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#模式："><span class="nav-number">1.</span> <span class="nav-text">模式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编程模型"><span class="nav-number">2.</span> <span class="nav-text">编程模型</span></a></li></ol></div>
             
 
           </div>
