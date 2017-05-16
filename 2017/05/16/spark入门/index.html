@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Spark 入门（一） 模式： 本地单机模式：所有Spark进程都运行在同一个JVM中。  集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 基于Mesos：使用Mesos集群计算框架。 基于YARN： 使用Hadoop2集群计算和资源调度框架。    spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JD">
+<meta name="description" content="###模式： + 本地单机模式：所有Spark进程都运行在同一个JVM中。  + 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 + 基于Mesos：使用Mesos集群计算框架。 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。   spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK）">
 <meta name="keywords" content="saprk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spark入门">
 <meta property="og:url" content="http://yoursite.com/2017/05/16/spark入门/index.html">
 <meta property="og:site_name" content="ZRK&#39;s Words">
-<meta property="og:description" content="Spark 入门（一） 模式： 本地单机模式：所有Spark进程都运行在同一个JVM中。  集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 基于Mesos：使用Mesos集群计算框架。 基于YARN： 使用Hadoop2集群计算和资源调度框架。    spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JD">
-<meta property="og:updated_time" content="2017-05-16T14:36:33.580Z">
+<meta property="og:description" content="###模式： + 本地单机模式：所有Spark进程都运行在同一个JVM中。  + 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 + 基于Mesos：使用Mesos集群计算框架。 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。   spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK）">
+<meta property="og:updated_time" content="2017-05-16T14:54:39.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark入门">
-<meta name="twitter:description" content="Spark 入门（一） 模式： 本地单机模式：所有Spark进程都运行在同一个JVM中。  集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 基于Mesos：使用Mesos集群计算框架。 基于YARN： 使用Hadoop2集群计算和资源调度框架。    spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JD">
+<meta name="twitter:description" content="###模式： + 本地单机模式：所有Spark进程都运行在同一个JVM中。  + 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。 + 基于Mesos：使用Mesos集群计算框架。 + 基于YARN： 使用Hadoop2集群计算和资源调度框架。   spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK）">
 
 
 
@@ -318,24 +318,23 @@
       
 
       
-        <h1 id="Spark-入门（一）"><a href="#Spark-入门（一）" class="headerlink" title="Spark 入门（一）"></a>Spark 入门（一）</h1><ol>
-<li>模式：<ul>
-<li>本地单机模式：所有Spark进程都运行在同一个JVM中。 </li>
-<li>集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。</li>
-<li>基于Mesos：使用Mesos集群计算框架。</li>
-<li>基于YARN： 使用Hadoop2集群计算和资源调度框架。 </li>
-</ul>
-</li>
+        <p>###模式：</p>
+<pre><code>+ 本地单机模式：所有Spark进程都运行在同一个JVM中。 
++ 集群单机模式：使用Spark自己的任务调度框架。两种模式完全兼容。
++ 基于Mesos：使用Mesos集群计算框架。
++ 基于YARN： 使用Hadoop2集群计算和资源调度框架。 
+</code></pre><ol>
 <li>spark本地安装：Hadoop的文件系统HDFS；运行基于Scala（二进制包已包含scala，无需再装Scala，但需装JDK）</li>
 <li>Spark集群：集群由两类测序构成,一个驱动程序多个执行程序。本地模式时所有的处理都运行在JVM中，集群时运行在不同节点上。</li>
-<li><p>编程模型</p>
+<li>编程模型</li>
+</ol>
 <ul>
 <li><p><code>SparkContext</code>类与<code>SparkConf</code>类：任何Spark程序的编写都从<code>SparkContext</code>(使用Java编写时是<code>JavaSparkContext</code>)开始的。<code>SparkContext</code>需要初始化一个<code>SparkConf</code>对象，后者包含Spark集群配置的各种参数（如主节点的URL）。初始化完成后可用<code>SparkContext</code>的方法类创建和操作分布式数据集和共享变量。Spark shell可以自动完成上述初始化过程。Scala代码实现：</p>
-  <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>()</div><div class="line">.setAppname（<span class="string">"Test Spark APP"</span>）</div><div class="line">.setMaster(<span class="string">"Local[4]"</span>)</div><div class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</div><div class="line"><span class="comment">//创建4线程的SparkContext对象，任务名为Test Spark APP</span></div></pre></td></tr></table></figure>
-  <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//调用SparkContext的构造函数</span></div><div class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(<span class="string">"Local[4]"</span>, <span class="string">"Test Spark APP"</span>)</div></pre></td></tr></table></figure>
-</li>
-<li><p>Spark shell: Spark 支持Scala 或 Python REPL（Read-Eval-Print-Loop,即交互式shell）。使用Scala shell：<code>./bin/spark-shell</code>;使用python shell<code>./bin/pyspark</code>.</p>
-</li>
+<pre><code><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> conf = <span class="keyword">new</span> <span class="type">SparkConf</span>()</div><div class="line">.setAppname（<span class="string">"Test Spark APP"</span>）</div><div class="line">.setMaster(<span class="string">"Local[4]"</span>)</div><div class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(conf)</div><div class="line"><span class="comment">//创建4线程的SparkContext对象，任务名为Test Spark APP</span></div></pre></td></tr></table></figure>
+
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//调用SparkContext的构造函数</span></div><div class="line"><span class="keyword">val</span> sc = <span class="keyword">new</span> <span class="type">SparkContext</span>(<span class="string">"Local[4]"</span>, <span class="string">"Test Spark APP"</span>)</div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>Spark shell: Spark 支持Scala 或 Python REPL（Read-Eval-Print-Loop,即交互式shell）。使用Scala shell：<code>./bin/spark-shell</code>;使用python shell<code>./bin/pyspark</code>.</li>
 <li><p>弹性分布数据集（RDD）：一个RDD代表一系列记录（某种类型的对象）。这些记录被分配到一个集群的多个节点上（本地模式下，可理解为单个进程的多个线程上）。RDD具有容错性当某个节点的任务失败时，RDD会自动在余下的节点自动重建，以便任务能最终完成。</p>
 <ul>
 <li><p>创建：现有集合创建</p>
@@ -345,7 +344,7 @@
 </li>
 </ul>
 </li>
-</ol>
+</ul>
 <pre><code>        基于Hadoop的输入源创建。
 
         <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> = rddFromTextFile = sc.textFile(<span class="string">"LICENSE"</span>)</div><div class="line"><span class="comment">//textfile 函数返回一个RDD对象。</span></div></pre></td></tr></table></figure>
@@ -471,17 +470,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar2.jpg"
@@ -545,22 +535,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spark-入门（一）"><span class="nav-number">1.</span> <span class="nav-text">Spark 入门（一）</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
