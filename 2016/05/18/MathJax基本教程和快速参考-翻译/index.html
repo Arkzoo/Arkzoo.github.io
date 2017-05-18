@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Machine Learning," />
+  <meta name="keywords" content="MathJax,翻译," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="本篇文章将对李航博士的《统计学方法》进行概览和梳理，方便以后自己的复习。概览将对每个模型仅给出模型、目标函数和学习算法不做过多解释和延伸（如果有需要，会另起一起文章）">
-<meta name="keywords" content="Machine Learning">
+<meta name="description" content="MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。它可以支持latex符号语言（对于经常排论文的同学来说估计再熟悉不过了，想当初排了自己的两篇论文之后，编写公式全程键盘、一气呵成）。本着总结知识的目的本文对MathJax语法进行整理。本文主要翻译至MathJax basic tutorial and quick reference。">
+<meta name="keywords" content="MathJax,翻译">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计学习方法概览">
-<meta property="og:url" content="http://yoursite.com/2017/05/18/统计学习方法概览/index.html">
+<meta property="og:title" content="MathJax基本教程和快速参考#翻译">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/MathJax基本教程和快速参考-翻译/index.html">
 <meta property="og:site_name" content="ZRK&#39;s Words">
-<meta property="og:description" content="本篇文章将对李航博士的《统计学方法》进行概览和梳理，方便以后自己的复习。概览将对每个模型仅给出模型、目标函数和学习算法不做过多解释和延伸（如果有需要，会另起一起文章）">
-<meta property="og:updated_time" content="2017-05-18T04:17:54.588Z">
+<meta property="og:description" content="MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。它可以支持latex符号语言（对于经常排论文的同学来说估计再熟悉不过了，想当初排了自己的两篇论文之后，编写公式全程键盘、一气呵成）。本着总结知识的目的本文对MathJax语法进行整理。本文主要翻译至MathJax basic tutorial and quick reference。">
+<meta property="og:updated_time" content="2017-05-18T09:24:05.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="统计学习方法概览">
-<meta name="twitter:description" content="本篇文章将对李航博士的《统计学方法》进行概览和梳理，方便以后自己的复习。概览将对每个模型仅给出模型、目标函数和学习算法不做过多解释和延伸（如果有需要，会另起一起文章）">
+<meta name="twitter:title" content="MathJax基本教程和快速参考#翻译">
+<meta name="twitter:description" content="MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。它可以支持latex符号语言（对于经常排论文的同学来说估计再熟悉不过了，想当初排了自己的两篇论文之后，编写公式全程键盘、一气呵成）。本着总结知识的目的本文对MathJax语法进行整理。本文主要翻译至MathJax basic tutorial and quick reference。">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/18/统计学习方法概览/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/05/18/MathJax基本教程和快速参考-翻译/"/>
 
 
 
 
 
-  <title>统计学习方法概览 | ZRK's Words</title>
+  <title>MathJax基本教程和快速参考#翻译 | ZRK's Words</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/18/统计学习方法概览/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/18/MathJax基本教程和快速参考-翻译/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zrk">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">统计学习方法概览</h1>
+          <h1 class="post-title" itemprop="name headline">MathJax基本教程和快速参考#翻译</h1>
         
 
         <div class="post-meta">
@@ -283,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T10:23:23+08:00">
-                2017-05-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-18T12:21:42+08:00">
+                2016-05-18
               </time>
             
 
@@ -318,29 +318,25 @@
       
 
       
-        <p>本篇文章将对李航博士的《统计学方法》进行概览和梳理，方便以后自己的复习。概览将对每个模型仅给出<em>模型</em>、<em>目标函数</em>和<em>学习算法</em>不做过多解释和延伸（如果有需要，会另起一起文章）<br><a id="more"></a></p>
-<h2 id="1-感知机"><a href="#1-感知机" class="headerlink" title="1. 感知机"></a>1. 感知机</h2><ul>
-<li>模型：<br>  \begin{equation}<br>  f(\mathbf{x})=sign（\boldsymbol{\omega}\cdot \textbf{x}+b）<br>  \end{equation}</li>
-<li>关键字：  <font color="#006666">分离超平面</font>、<font color="#006666">判别模型</font></li>
-<li><p>目标函数和策略：最小化误分点到超平面的函数间隔</p>
-<p>  $$\min_{\boldsymbol{w},b} L(\boldsymbol{w},b)=-\sum_{x_i\in M}y_i(\boldsymbol{w}\cdot x_i-b)$$</p>
+        <p>MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。它可以支持latex符号语言（对于经常排论文的同学来说估计再熟悉不过了，想当初排了自己的两篇论文之后，编写公式全程键盘、一气呵成）。本着总结知识的目的本文对MathJax语法进行整理。本文主要翻译至<a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a>。<br><a id="more"></a></p>
+<h2 id="什么是MathJax"><a href="#什么是MathJax" class="headerlink" title="什么是MathJax"></a>什么是MathJax</h2><p>MathJax是一个开源JavaScript库。它支持LaTeX、MathML、AsciiMath符号，可以运行于所有流行浏览器上。对大部分用户而言它不需要安装，即没有插件需要下载也没有软件需要安装，只需要在页面中包含MathJax脚本和一些数学公式，其他的事情交给MathJax来处理。</p>
+<p>MathJax使用网络字体（大部分浏览器都支持）去产生高质量的排版，使其在所有分辨率都可缩放和显示，这远比使用包含公式的图片要有效得多。</p>
+<p>使用MathJax显示数学公式是基于文本的，而非图片。它可以被搜索引擎使用，这意味着方程式和页面上的文字一样是可以被搜索的。 MathJax允许页面作者使用TeX、LaTeX符号和 MathML 或者 AsciiMath 去书写公式。</p>
+<p>MathJax是模块化的，所以它仅仅在需要时才加载它的组件。同时也可以被扩展以实现更多功能。 更多关于MathJax请移至<a href="https://www.mathjax.org/" target="_blank" rel="external">www.mathjax.org</a>、<a href="http://mathjax-chinese-doc.readthedocs.io/en/latest/index.html#" target="_blank" rel="external">MathJax 中文文档</a>.</p>
+<h2 id="1-基本公式用法"><a href="#1-基本公式用法" class="headerlink" title="1. 基本公式用法"></a>1. 基本公式用法</h2><h3 id="行间公式和独立公式"><a href="#行间公式和独立公式" class="headerlink" title="行间公式和独立公式"></a>行间公式和独立公式</h3><ul>
+<li><p>行间（inline）公式使用$\quad\color{RoyalBlue}{\$…\$}\quad$:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是一个公式$\sum_&#123;i=0&#125;^n i^2 = \frac&#123;(n^2+n)(2n+1)&#125;&#123;6&#125;$他在行中间</div></pre></td></tr></table></figure>
+<p>  显示：<br>  这是一个公式$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$他在行中间</p>
 </li>
-<li>参数随机梯度下降</li>
-</ul>
-<h2 id="2-KNN"><a href="#2-KNN" class="headerlink" title="2. KNN"></a>2. KNN</h2><ul>
-<li><p>模型：<br>  \begin{equation}<br>  y=\arg\max_{c_j}\sum_{x_i\in N_{k}(x)}I(y_i=c_j),\quad i=1,2,\cdots,N; \quad j=1,2,\cdots,K<br>  \end{equation}</p>
-<p>  $I$为指示函数，$N_{k}(x)$为训练集T中与$\mathbf{x}$最邻近的k个点的集合.距离度量方法，参见<a href="">向量空间与向量距离</a>。</p>
+<li><p>独立（displayed）公式使用$\quad\color{RoyalBlue}{\$\$…\$\$}\quad$:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$$\sum_&#123;i=0&#125;^n i^2 = \frac&#123;(n^2+n)(2n+1)&#125;&#123;6&#125;$$</div></pre></td></tr></table></figure>
+<p>  显示：<br>  $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
+<p>  或者使用$\quad\color{RoyalBlue}{\backslash begin\{equation\} … \backslash end\{equation\}}\quad$</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\begin&#123;equation&#125;</div><div class="line">\sum_&#123;i=0&#125;^n i^2 = \frac&#123;(n^2+n)(2n+1)&#125;&#123;6&#125;</div><div class="line">\end&#123;equation&#125;</div></pre></td></tr></table></figure>
+<p>  显示<br>  \begin{equation}<br>  \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}<br>  \end{equation}</p>
 </li>
-<li>关键字：  <font color="#006666">特征空间</font>，<font color="#006666">样本点</font></li>
-<li>目标函数和策略：0-1损失函数误分类率最小化，即多数表决。</li>
-<li>k值选择</li>
-<li>KNN实现：kd树</li>
 </ul>
-<h2 id="3-朴素贝叶斯"><a href="#3-朴素贝叶斯" class="headerlink" title="3. 朴素贝叶斯"></a>3. 朴素贝叶斯</h2><ul>
-<li>描述：</li>
-<li>模型</li>
-</ul>
-
+<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3>
       
     </div>
 
@@ -369,7 +365,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+            <a href="/tags/MathJax/" rel="tag"># MathJax</a>
+          
+            <a href="/tags/翻译/" rel="tag"># 翻译</a>
           
         </div>
       
@@ -382,18 +380,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/16/spark入门/" rel="next" title="spark入门">
-                <i class="fa fa-chevron-left"></i> spark入门
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/18/高斯分布/" rel="prev" title="高斯分布">
-                高斯分布 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/16/about-me/" rel="prev" title="about me">
+                about me <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-感知机"><span class="nav-text">1. 感知机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-KNN"><span class="nav-text">2. KNN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-朴素贝叶斯"><span class="nav-text">3. 朴素贝叶斯</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是MathJax"><span class="nav-text">什么是MathJax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基本公式用法"><span class="nav-text">1. 基本公式用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行间公式和独立公式"><span class="nav-text">行间公式和独立公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希腊字母"><span class="nav-text">希腊字母</span></a></li></ol></li></ol></div>
             
 
           </div>
